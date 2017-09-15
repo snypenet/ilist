@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	@Styles.Render("~/Content/css")
+</head>
+<body>
+	<div ng-app="iList">
+		@RenderBody()
+	</div>
+
+				@Scripts.Render("~/bundles/angular")
+				<script src="@Url.Content("~/Scripts/index.js")"></script>
+		@Scripts.Render("~/bundles/services")
+			@Scripts.Render("~/bundles/controllers")
+	@RenderSection("scripts", required: false)
+</body>
+</html>

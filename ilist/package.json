@@ -1,0 +1,15 @@
+{
+  "name": "ilist",
+  "version": "1.0.0",
+  "description": "An awesome app to make lists of stuff in.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo working!"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^0.2.18"
+  }
+}
