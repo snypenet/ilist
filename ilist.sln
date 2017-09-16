@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iList", "ilist\iList.csproj", "{81FC9AB8-B4A5-4098-B9F7-A98F324554FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iList.Data", "iList.Data\iList.Data.csproj", "{8472868B-92EB-476F-A88D-1DFC9AEBF296}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{81FC9AB8-B4A5-4098-B9F7-A98F324554FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81FC9AB8-B4A5-4098-B9F7-A98F324554FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81FC9AB8-B4A5-4098-B9F7-A98F324554FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8472868B-92EB-476F-A88D-1DFC9AEBF296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8472868B-92EB-476F-A88D-1DFC9AEBF296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8472868B-92EB-476F-A88D-1DFC9AEBF296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8472868B-92EB-476F-A88D-1DFC9AEBF296}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

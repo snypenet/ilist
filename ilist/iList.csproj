@@ -130,6 +130,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Requests\CreateListItemRequest.cs" />
+    <Compile Include="Models\Responses\CreateListItemResponse.cs" />
+    <Compile Include="Models\Responses\DeleteListItemResponse.cs" />
+    <Compile Include="Models\Responses\GetListItemByIdResponse.cs" />
+    <Compile Include="Models\Responses\GetListItemsResponse.cs" />
+    <Compile Include="Models\Responses\ResponseBase.cs" />
+    <Compile Include="Models\Requests\UpdateListItemRequest.cs" />
+    <Compile Include="Models\Responses\UpdateListItemResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -155,10 +163,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iList.Data\iList.Data.csproj">
+      <Project>{8472868b-92eb-476f-a88d-1dfc9aebf296}</Project>
+      <Name>iList.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
