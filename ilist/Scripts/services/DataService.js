@@ -43,7 +43,7 @@
         }
 
         function insertListItem(text) {
-            $http.post(listItemsUrl, { text: text }).then(function(successResponse) {
+            return $http.post(listItemsUrl, { text: text }).then(function(successResponse) {
                 var response = onSuccessCallback(successResponse);
                 response.data = response.data.Item;
                 return response;
@@ -51,7 +51,7 @@
         }
 
         function deleteListItem(id) {
-            $http.delete(listItemsUrl + "/" + id).then(function(successResponse) {
+            return $http.delete(listItemsUrl + "/" + id).then(function(successResponse) {
                 var response = onSuccessCallback(successResponse);
                 response.data = response.data.IsSuccess;
                 return response;

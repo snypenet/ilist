@@ -1,1 +1,16 @@
-﻿new list item
+﻿<div>
+	<div ng-include="'/Scripts/templates/header.html'"></div>
+	<div class="row">
+		<div class="columns small-6">
+			<label>
+				Text
+				<input ng-model="model.text" type="text" />
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns small-2">
+			<button class="button" ng-click="model.save()">Save</button>
+		</div>
+	</div>
+</div>

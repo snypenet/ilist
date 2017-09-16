@@ -1,11 +1,10 @@
 ﻿<div>
-	<div class="row">
-		<div class="small-2 large-6">
-			<span ng-show="model.isError && model.message" class="form-error">{{model.message}}</span>
-			<span ng-show="!model.isError && model.message" class="form-error">{{model.message}}</span>
-		</div>
-	</div>
-	<div class="row" ng-repeat="item in model.listItems">
+	<div ng-include="'/Scripts/templates/header.html'"></div>
+	<div ng-show="model.listItems.length > 0" class="row" ng-repeat="item in model.listItems">
 		<div class="columns">{{item.Text}}</div>
+	</div>
+	<div ng-show="model.listItems.length == 0">
+		<h3>You don't have any list items :(</h3>
+		<h4>Add some using the link above</h4>
 	</div>
 </div>

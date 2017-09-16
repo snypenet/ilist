@@ -14,12 +14,12 @@ namespace iList.Data.Providers
 
         public async Task<List<ListItem>> GetListItems()
         {
-            return (await QueryAsync<ListItem>(@"SELECT * FROM ListItem (NOLOCK)")).ToList();
+            return (await QueryAsync<ListItem>(@"SELECT * FROM ListItem (NOLOCK) ORDER BY LastUpdatedOn DESC")).ToList();
         }
 
         public async Task<ListItem> GetListItemById(Guid listItemId)
         {
-            return (await QueryAsync<ListItem>(@"SELECT * FROM ListItem WHERE Id = @Id", new { Id = listItemId })).FirstOrDefault();
+            return (await QueryAsync<ListItem>(@"SELECT * FROM ListItem (NOLOCK) WHERE Id = @Id", new { Id = listItemId })).FirstOrDefault();
         }
 
         public async Task<bool> DeleteListItemById(Guid listItemId)
@@ -30,20 +30,22 @@ namespace iList.Data.Providers
         public async Task<ListItem> UpdateListItem(ListItem updatedItem)
         {
             return (await QueryAsync<ListItem>(@"UPDATE ListItem
-                                                 SET Text = @Text
+                                                 SET Text = @Text,
+                                                     LastUpdatedOn = GETDATE()
                                                  WHERE Id = @Id;
                                                  SELECT * FROM ListItem (NOLOCK)", new { Id = updatedItem, Text = updatedItem.Text })).FirstOrDefault();
         }
 
         public async Task<ListItem> InsertListItem(string text)
         {
+            var newId = Guid.NewGuid();
             return (await QueryAsync<ListItem>(@"INSERT INTO ListItem
-                                                 (Id, Text)
+                                                 (Id, Text, CreatedOn, LastUpdatedOn)
                                                  VALUES
-                                                 (NEWID(), @Text);
+                                                 (@NewId, @Text, GETDATE(), GETDATE());
                                                  SELECT * 
                                                  FROM ListItem (NOLOCK)
-                                                 WHERE Id = SCOPE_IDENTITY()", new { Text = text })).FirstOrDefault();
+                                                 WHERE Id = @NewId", new { Text = text, NewId = newId })).FirstOrDefault();
         }
     }
 }

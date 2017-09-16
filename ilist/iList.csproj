@@ -150,6 +150,7 @@
     <Content Include="Scripts\index.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\services\DataService.js" />
+    <Content Include="Scripts\templates\header.html" />
     <Content Include="Scripts\templates\listItems.html" />
     <Content Include="Scripts\templates\newListItem.html" />
     <Content Include="Scripts\what-input.js" />
