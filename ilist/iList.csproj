@@ -141,12 +141,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\foundation.css" />
     <Content Include="Global.asax" />
     <Content Include="package.json" />
     <Content Include="Scripts\controllers\ListItemsController.js" />
+    <Content Include="Scripts\controllers\NewListItemController.js" />
+    <Content Include="Scripts\foundation.js" />
     <Content Include="Scripts\index.js" />
+    <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\services\DataService.js" />
     <Content Include="Scripts\templates\listItems.html" />
+    <Content Include="Scripts\templates\newListItem.html" />
+    <Content Include="Scripts\what-input.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -172,6 +178,9 @@
       <Project>{8472868b-92eb-476f-a88d-1dfc9aebf296}</Project>
       <Name>iList.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_Menu.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

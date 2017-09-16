@@ -1,1 +1,11 @@
-﻿These are list items
+﻿<div>
+	<div class="row">
+		<div class="small-2 large-6">
+			<span ng-show="model.isError && model.message" class="form-error">{{model.message}}</span>
+			<span ng-show="!model.isError && model.message" class="form-error">{{model.message}}</span>
+		</div>
+	</div>
+	<div class="row" ng-repeat="item in model.listItems">
+		<div class="columns">{{item.Text}}</div>
+	</div>
+</div>
