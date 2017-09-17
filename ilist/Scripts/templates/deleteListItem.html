@@ -1,0 +1,12 @@
+﻿<div ng-show="model.isLoaded">
+	<div ng-include="'/Scripts/templates/header.html'"></div>
+	<div class="row">
+		<div class="columns small-12">
+			Are you sure you want to delete '{{model.item.Text}}'?
+			<div>
+				<button ng-click="model.delete()" class="button alert">Yes</button>
+				<button ng-click="model.goBack()" class="button">No</button>
+			</div>
+		</div>
+	</div>
+</div>

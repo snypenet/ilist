@@ -17,5 +17,19 @@
             controller: "newListItemController",
             templateUrl: "/Scripts/templates/newListItem.html"
         });
+
+        $stateProvider.state({
+            name: "deleteListItem",
+            url: "/item/delete/:id",
+            controller: "deleteListItemController",
+            templateUrl: "/Scripts/templates/deleteListItem.html"
+        });
+
+        $stateProvider.state({
+            name: "updateListItem",
+            url: "/item/update/:id",
+            controller: "updateListItemController",
+            templateUrl: "/Scripts/templates/updateListItem.html"
+        });
 	});
 })()

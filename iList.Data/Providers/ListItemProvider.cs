@@ -33,7 +33,7 @@ namespace iList.Data.Providers
                                                  SET Text = @Text,
                                                      LastUpdatedOn = GETDATE()
                                                  WHERE Id = @Id;
-                                                 SELECT * FROM ListItem (NOLOCK)", new { Id = updatedItem, Text = updatedItem.Text })).FirstOrDefault();
+                                                 SELECT * FROM ListItem (NOLOCK)", new { Id = updatedItem.Id, Text = updatedItem.Text })).FirstOrDefault();
         }
 
         public async Task<ListItem> InsertListItem(string text)

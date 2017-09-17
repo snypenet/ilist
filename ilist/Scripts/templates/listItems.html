@@ -1,7 +1,11 @@
 ﻿<div>
 	<div ng-include="'/Scripts/templates/header.html'"></div>
 	<div ng-show="model.listItems.length > 0" class="row" ng-repeat="item in model.listItems">
-		<div class="columns">{{item.Text}}</div>
+		<div class="columns small-5">{{item.Text}}</div>
+		<div class="columns small-7">
+			<a ui-sref="deleteListItem({ id: item.Id })">Delete</a>
+			<a ui-sref="updateListItem({ id: item.Id })">Edit</a>
+		</div>
 	</div>
 	<div ng-show="model.listItems.length == 0">
 		<h3>You don't have any list items :(</h3>

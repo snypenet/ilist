@@ -35,7 +35,7 @@
         }
 
         function updateListItem(listItem) {
-            $http.put(listItemsUrl, { id: listItem.id, text: listItem.text }).then(function(successResponse) {
+            return $http.put(listItemsUrl, { Item: { Id: listItem.Id, Text: listItem.Text } }).then(function(successResponse) {
                 var response = onSuccessCallback(successResponse);
                 response.data = response.data.Item;
                 return response;

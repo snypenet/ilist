@@ -4,7 +4,7 @@
 
         function onLoadListItemsCallback(response) {
             $scope.model.isError = response.isError;
-            $scope.model.viewMessage = response.message;
+            $scope.model.message = response.message;
             $scope.model.listItems = response.data;
         }
 

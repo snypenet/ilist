@@ -16,13 +16,13 @@
                     this.message = "Please enter something valid";
                 } else {
                     this.isError = false;
-                    this.message = null;
+                    this.message = "";
                     dataService.insertListItem(this.text).then(onSaveCallback.bind(this));
                 }
             },
-            text: null,
+            text: "",
             isError: false,
-			message: null
+			message: ""
         }; 
 		
     };

@@ -143,16 +143,24 @@
   <ItemGroup>
     <Content Include="Content\foundation.css" />
     <Content Include="Global.asax" />
+    <Content Include="karma.conf.js" />
     <Content Include="package.json" />
+    <Content Include="Scripts\controllers\DeleteListItemController.js" />
+    <Content Include="Scripts\controllers\DeleteListItemController.spec.js" />
+    <Content Include="Scripts\controllers\ListItemsController.spec.js" />
     <Content Include="Scripts\controllers\ListItemsController.js" />
     <Content Include="Scripts\controllers\NewListItemController.js" />
+    <Content Include="Scripts\controllers\UpdateListItemController.js" />
     <Content Include="Scripts\foundation.js" />
     <Content Include="Scripts\index.js" />
     <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\mock\mockAngular.js" />
     <Content Include="Scripts\services\DataService.js" />
+    <Content Include="Scripts\templates\deleteListItem.html" />
     <Content Include="Scripts\templates\header.html" />
     <Content Include="Scripts\templates\listItems.html" />
     <Content Include="Scripts\templates\newListItem.html" />
+    <Content Include="Scripts\templates\updateListItem.html" />
     <Content Include="Scripts\what-input.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
