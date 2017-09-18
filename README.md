@@ -1,1 +1,1 @@
-# ilist
+This is a simple project to help show off my skills in web development.  This uses angular 1.x on the frontend and Web API and MVC on the server side.  Dapper is used in the DAL.  Foundation is used as the styling library.
