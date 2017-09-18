@@ -5,3 +5,5 @@ ilist/node_modules/
 ilist/obj/
 packages/
 iList.Data/bin/
+iList.Tests/bin/
+iList.Tests/obj/

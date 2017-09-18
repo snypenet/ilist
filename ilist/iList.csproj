@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -146,6 +147,7 @@
     <Content Include="karma.conf.js" />
     <Content Include="package.json" />
     <Content Include="Scripts\controllers\DeleteListItemController.js" />
+    <Content Include="Scripts\controllers\UpdateListItemController.spec.js" />
     <Content Include="Scripts\controllers\DeleteListItemController.spec.js" />
     <Content Include="Scripts\controllers\ListItemsController.spec.js" />
     <Content Include="Scripts\controllers\ListItemsController.js" />
@@ -190,6 +192,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\_Menu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\controllers\NewListItemController.spec.js" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

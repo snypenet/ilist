@@ -21,8 +21,15 @@
         }
 
         $scope.model = {
-            update: function() {
-                dataService.updateListItem(this.item).then(onUpdateCallback.bind(this));
+			update: function () {
+				if (!$scope.model.item.Text) {
+					$scope.model.isError = true;
+					$scope.model.message = "Please enter a valid entry";
+				} else {
+					$scope.model.isError = false;
+					$scope.model.mess = "";
+					dataService.updateListItem(this.item).then(onUpdateCallback.bind(this));
+				}
             },
             isError: false,
             message: "",
