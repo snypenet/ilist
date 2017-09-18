@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\foundation.css" />
+    <Content Include="fonts\icomoon.svg" />
     <Content Include="Global.asax" />
     <Content Include="karma.conf.js" />
     <Content Include="package.json" />
@@ -195,6 +196,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\controllers\NewListItemController.spec.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

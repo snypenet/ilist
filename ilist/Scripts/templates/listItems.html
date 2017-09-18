@@ -1,14 +1,16 @@
-﻿<div>
+﻿<div class="listItemContainer">
 	<div ng-include="'/Scripts/templates/header.html'"></div>
-	<div ng-show="model.listItems.length > 0" class="row" ng-repeat="item in model.listItems">
-		<div class="columns small-5">{{item.Text}}</div>
-		<div class="columns small-7">
-			<a ui-sref="deleteListItem({ id: item.Id })">Delete</a>
-			<a ui-sref="updateListItem({ id: item.Id })">Edit</a>
+	<div ng-show="model.listItems.length > 0" class="row listItem" ng-repeat="item in model.listItems">
+		<div class="columns small-7">{{item.Text}}</div>
+		<div class="columns small-5">
+			<button class="button alert" ui-sref="deleteListItem({ id: item.Id })"><span class="words">Delete </span><span class="icon-bin"></span></button>
+			<button class="button secondary" ui-sref="updateListItem({ id: item.Id })"><span class="words">Edit </span><span class="icon-pencil"></span></button>
 		</div>
-	</div>
-	<div ng-show="model.listItems.length == 0">
-		<h3>You don't have any list items :(</h3>
-		<h4>Add some using the link above</h4>
+	</div>	
+	<div class="row listItem" ng-show="model.listItems.length == 0">
+		<div class="small-12">
+			<h3>You don't have any list items :(</h3>
+			<h4>Add some using the link above</h4>
+		</div>
 	</div>
 </div>

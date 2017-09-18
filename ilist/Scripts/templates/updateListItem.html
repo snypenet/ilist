@@ -1,16 +1,20 @@
 ﻿<div ng-show="model.isLoaded">
 	<div ng-include="'/Scripts/templates/header.html'"></div>
-	<div class="row">
-		<div class="columns small-12">
-			<label>
-				Text
-				<input ng-model="model.item.Text" type="text" />
-			</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="columns small-12">
-			<button class="button" ng-click="model.update()">Save</button>
+	<div class="row listItem">
+		<div class="columns">
+			<div class="row">
+				<div class="columns small-12">
+					<label>
+						Text
+						<input ng-model="model.item.Text" type="text" />
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="columns small-12">
+					<button class="button secondary" ng-click="model.update()">Save</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
